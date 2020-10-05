@@ -9,32 +9,32 @@ is happening in the server side, or in the browser side
 import { isSSR, isBrowser, onSSR, onBrowser } from '@straw-hat/is-ssr';
 
 if(isSSR()) {
-  console.log('💻 I am running in server side.');
+  console.log('💻 I am running on the server side.');
 }
 
 if(isBrowser()) {
-  console.log('I am running in browser side.');
+  console.log('I am running on the browser side.');
 }
 
 // Run the function on Server Side
 
 onSSR(function ssrCallback() {
-  console.log('💻 I am running in server side.')
+  console.log('💻 I am running on the server side.')
 });
 
 onSSR(
-  function ssrCallback() { console.log('💻 I am running in server side.') },
-  function browserCallback() { console.log('I am running in browser side.') },
+  function ssrCallback() { console.log('💻 I am running on the server side.') },
+  function browserCallback() { console.log('I am running on the browser side.') },
 );
 
 // Run the function on Browser Side
 
 onBrowser(
-  function browserCallback() { console.log('I am running in browser side.') },
-  function ssrCallback() { console.log('💻 I am running in server side.') },
+  function browserCallback() { console.log('I am running on the browser side.') },
+  function ssrCallback() { console.log('💻 I am running on the server side.') },
 );
 
 onBrowser(function browserCallback() {
-  console.log('I am running in browser side.')
+  console.log('I am running on the browser side.')
 });
 ```
