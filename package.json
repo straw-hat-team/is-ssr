@@ -1,0 +1,40 @@
+{
+  "name": "@straw-hat/is-ssr",
+  "version": "1.0.0",
+  "description": "Check if the code is running in server side",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/is-ssr.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ssr",
+    "browser",
+    "server-side-rendering",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.prod.json",
+    "test": "jest"
+  },
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@straw-hat/tsconfig": "^2.1.0",
+    "@straw-hat/prettier-config": "^1.1.0",
+    "@types/jest": "^26.0.14",
+    "jest": "^26.5.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.4.1",
+    "typescript": "^4.0.3"
+  }
+}
