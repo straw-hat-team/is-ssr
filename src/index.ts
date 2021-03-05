@@ -1,5 +1,5 @@
 export function isSSR() {
-  return !(typeof globalThis.window != 'undefined' && globalThis.window.document);
+  return typeof globalThis.window?.document?.createElement === 'undefined';
 }
 
 export function isBrowser() {

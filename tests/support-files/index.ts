@@ -1,7 +1,13 @@
 export function addBrowserContext(callback: Function) {
-  // @ts-ignore
-  globalThis.window = { document: {} };
+  globalThis.window = {
+    document: {
+      // @ts-ignore
+      createElement() {},
+    },
+  };
+
   callback();
+
   // @ts-ignore
   delete globalThis.window;
 }
