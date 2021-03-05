@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/is-ssr",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Check if the code is running on the server side",
   "repository": {
     "type": "git",
